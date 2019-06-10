@@ -1,0 +1,22 @@
+throw를 사용하면 Exception이 타고 올라온다.
+결국 Exception이 한곳으로 모인다.
+
+Exception은 RuntimeException, 
+
+RunTimeException으로 전환 작업이 필요하다.
+RunTimeException은 try/catch구문이 필요 없다.
+
+
+스프링에서 발생하는 Exception은 모두 RunTimeException이다.
+여기서 발생하는 Exception은 모두 톰캣까지 올린다.
+이러한 예외에 대한 처리는 web.xml에 설정한다.
+
+공통적으로 처리하는 ExceptionHandler가 있으면 
+톰캣으로 가지 않는다.
+500.jsp로 가지 않는다.
+
+방화벽, 예외.. 등 외부 요인으로 생각되어 기술침투가 아니다.
+기술침투로 생각해야 하는 부분은 서비스 부분
+
+로그 출력
+PrintWriter(StringWriter_버퍼객체)

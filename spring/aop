@@ -1,0 +1,7 @@
+횡단 실행 모듈을 Advice라고 한다.
+
+when	Join Point (after, before, after Returning, after throwing, around)
+
+where	Point Cut
+
+what	Advice

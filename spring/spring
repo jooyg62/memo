@@ -1,0 +1,38 @@
+
+ 	(요청)
+	  |
+Encoding Filter
+	  |
+Dispather Servlet
+	  |
+ContextLoadListener (현재 위치)
+
+-----------------------------------------------------------------------------
+
+application.xml -> RootApplicationContext( UserDao,... 비지니스 서비스 작업 )
+							| (RootApplicationContext를 참조하고 있다.)
+spring-servlet.xml -> WebApplicationContext(VR, HM,... 웹 서비스 작업)  <- 우선적으로 읽음
+
+
+상황 1) ModelAndView	<- (Controller) handler Method()
+	String
+	-> view로 이동
+
+							@ResponseBody
+상황 2) String, Object	<- (Controller) handler Method()
+	-> Message Converter가 위의 형식으로 바꿔줌
+	
+	@RequestBody는 json 형태를 객체 형태로 변환해 준다.
+	
+iconfinder 사이트에서 이미지를 다운받을 수 있다.
+
+게시판
+오늘만 1씩 늘도록 - 쿠키를 통해 카운트 관리
+
+답글(굳이 안해도됨) - 게시판의 답글과 답글의 답글이 있다. (계층형 답글)
+board comments 일대다 관계
+(첨부파일 굳이 안해도됨)
+
+검색기능 - 제목이나 컨텐츠 안에서 키워드가 맞는데로
+
+접근제어 코드 꼭 작성하자!

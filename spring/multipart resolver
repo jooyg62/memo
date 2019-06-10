@@ -1,0 +1,8 @@
+common multipart 나눠주는 역할
+multipart file upload 나눠진 객체를 묶어서 전달해주는 역할
+multipart Resolver가 위의 두가지를 다루며
+핸들러에서 multipartFile 파라미터로 세팅해 준다.
+
+문자 + 를 많은 for문에서 쓰면 안되는 이유!!
+s += "hello" -> new StringBuffer(s).append("hello");
+위와 같이 new로 객체가 엄청 생성되게 된다. -> 느림
